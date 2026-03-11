@@ -1,0 +1,300 @@
+/* --- Global Styles & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    letter-spacing: 2px; 
+}
+
+.logo span { color: #ff4757; }
+
+.search-container {
+    background: #222;
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+.search-container i { 
+    color: #ff4757; 
+    margin-right: 10px; 
+}
+
+#searchInput {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.nav-icons { 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+}
+
+.cart-box { position: relative; }
+
+#cart-count {
+    background: #ff4757;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+
+/* --- Hero Section (Background Image) --- */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.badge {
+    background: #ff4757;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.hero-content h1 { 
+    font-size: 4rem; 
+    margin: 15px 0; 
+    letter-spacing: 3px; 
+}
+
+.hero-btn {
+    padding: 12px 35px;
+    background: #ff4757;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover { 
+    background: #e84118; 
+    transform: scale(1.05); 
+}
+
+/* --- Filter Bar --- */
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background: white;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #111;
+    color: white;
+}
+
+/* --- Product Grid --- */
+.container { padding: 50px 8%; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* --- Shoe Cards --- */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-info { 
+    padding: 20px; 
+    text-align: center; 
+    flex-grow: 1;
+}
+
+.card-info h3 { 
+    font-size: 1.1rem; 
+    margin-bottom: 5px; 
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff4757;
+    margin-bottom: 15px;
+}
+
+/* --- Dual Buttons Styling --- */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.cart-btn {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.cart-btn:hover {
+    background: #e0e0e0;
+}
+
+.buy-btn {
+    background: #111;
+    color: white;
+}
+
+.buy-btn:hover {
+    background: #ff4757;
+}
+
+/* Remove underline from link inside card */
+.card-info a {
+    text-decoration: none;
+}
+
+/* --- About Section --- */
+.about-section {
+    padding: 80px 8%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.about-content h2 { 
+    font-size: 2.2rem; 
+    margin-bottom: 20px; 
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.stat-item h3 { 
+    color: #ff4757; 
+    font-size: 2.5rem; 
+}
+
+/* --- Footer --- */
+footer {
+    background: #000;
+    color: #888;
+    padding: 60px 8% 20px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-about h3 span { color: #ff4757; }
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover { color: #ff4757; }
+
+.copyright {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    margin-top: 40px;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .search-container { width: 100%; margin: 10px 0; }
+    nav { flex-direction: column; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .stats { flex-direction: column; gap: 30px; }
+}
